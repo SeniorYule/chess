@@ -55,10 +55,10 @@ export class Board{
     }
 
     private addKnights() {
-        new Knight(Colors.WHITE , this.getCell(1 , 0))
-        new Knight(Colors.WHITE , this.getCell(6 , 0))
-        new Knight(Colors.BLACK , this.getCell(1, 7))
-        new Knight(Colors.BLACK , this.getCell(6, 7))
+        new Knight(Colors.BLACK , this.getCell(1 , 0))
+        new Knight(Colors.BLACK , this.getCell(6 , 0))
+        new Knight(Colors.WHITE , this.getCell(1, 7))
+        new Knight(Colors.WHITE , this.getCell(6, 7))
     }
 
     private addRooks() {
