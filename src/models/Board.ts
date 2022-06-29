@@ -39,12 +39,12 @@ export class Board{
      }
 
 
-    public highlightCells(selectedCell : Cell | null) {
+    public highlightCells(selectedCell: Cell | null) {
         for (let i = 0; i < this.cells.length; i++) {
             const row = this.cells[i];
             for (let j = 0; j < row.length; j++) {
                 const target = row[j];
-                target.availaple = !!selectedCell?.figure?.canMove(target)
+                target.available = !!selectedCell?.figure?.canMove(target)
             }
         }
     }
@@ -56,10 +56,9 @@ export class Board{
 
 
     private addKings() {
-        for (let i = 0; i < 8; i++) {
             new King(Colors.BLACK , this.getCell(4, 0))
             new King(Colors.WHITE , this.getCell(4 , 7))
-        }
+        
     }
 
 

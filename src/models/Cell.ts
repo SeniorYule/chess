@@ -8,7 +8,7 @@ export class Cell{
     readonly color: Colors;
     figure: Figure | null;
     board: Board;
-    availaple: boolean; /// Можешь ли переместиться
+    available: boolean; /// Можешь ли переместиться
     id : number; /// Для реакт ключей
     
     constructor(board: Board, x: number, y:number, color: Colors, figure: Figure | null){
@@ -17,7 +17,7 @@ export class Cell{
         this.color = color;
         this.figure =figure;
         this.board = board;
-        this.availaple = false;
+        this.available = false;
         this.id = Math.random()
 
 
@@ -25,7 +25,7 @@ export class Cell{
 
     moveFigure(target: Cell){
         if( this.figure && this.figure?.canMove(target)){
-            this.figure.canMove(target)
+            this.figure.moveFigure(target)
             target.figure = this.figure
             this.figure = null 
         }
