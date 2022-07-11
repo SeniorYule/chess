@@ -13,6 +13,12 @@ export class Queen extends Figure{
     canMove(target: Cell): boolean {
         if(!super.canMove(target))
             return false
-        return true    
+        if(this.cell.isEmtyVertical(target))
+            return true
+        if(this.cell.isEmtyHorizontal(target))
+            return true
+        if(this.cell.isEmtyDiagonal(target))
+            return true
+        return false    
     }
 }

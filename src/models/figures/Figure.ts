@@ -23,7 +23,7 @@ export class Figure{
 
 
     constructor(color: Colors, cell: Cell){
-        this.color =color;
+        this.color = color;
         this.cell = cell;
         this.cell.figure = this;
         this.logo = null;
