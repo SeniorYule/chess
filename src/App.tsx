@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import BoardComponent from './component/BoardComponent';
+import LostFigure from './component/LostFigure';
 import { Board } from './models/Board';
 import { Colors } from './models/Colors';
 import { Player } from './models/Players';
@@ -34,6 +35,15 @@ function App() {
         currentPlayer = {currentPlayer}
         swapPlayer = {swapPlayer}
       />
+
+      <div>
+        <LostFigure 
+        title='Черные фигуры' 
+        figures = {board.lostBlackFigure}/>
+        <LostFigure 
+        title='Белые фигуры' 
+        figures = {board.lostWhiteFigure}/>
+      </div>
     </div>
   );
 }
