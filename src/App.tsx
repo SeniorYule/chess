@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import BoardComponent from './component/BoardComponent';
 import LostFigure from './component/LostFigure';
+import Timer from './component/Timer';
 import { Board } from './models/Board';
 import { Colors } from './models/Colors';
 import { Player } from './models/Players';
@@ -29,6 +30,10 @@ function App() {
 
   return (
     <div className="App">
+      <Timer
+        restart={restart}
+        currentPlayer = {currentPlayer}
+      />
       <BoardComponent
         board={board}
         setBoard ={setBoard}
